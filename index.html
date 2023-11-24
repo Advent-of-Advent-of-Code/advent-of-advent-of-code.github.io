@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Advent of Advent of Code</title>
+
+  <script>
+    function getDaysUntilTarget(target) {
+      const oneDay = 1000 * 60 * 60 * 24;
+
+      const result = Math.max(0, Math.ceil((target - new Date()) / oneDay));
+      return result;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const dayElements = document.getElementsByClassName("day");
+      const daysRemaining = getDaysUntilTarget(new Date(new Date().getFullYear(), 11, 1));
+      
+      for (let i = daysRemaining; i < dayElements.length; i++) {
+        dayElements[i].classList.add("open");
+      }
+    });
+
+  </script>
+
+  <style>
+    body {
+      display: flex;
+    }
+
+    .flex-padding {
+      flex: 1;
+    }
+
+    .content {
+      width: 720px;
+      text-align: center;
+      font-family: monospace;
+
+      .day {
+        display: inline-block;
+
+        color: green;
+        border: 1px solid green;
+        background-color: green;
+
+        padding: 6px;
+        margin: 2px 0;
+        font-weight: bold;
+      }
+
+      .day.open {
+        background-color: rgba(0, 128, 0, 0.2);
+      }
+
+      .floor {
+        display: flex;
+        flex-wrap: wrap;
+
+        .day {
+          display: block;
+          flex: 1;
+          flex-wrap: wrap;
+          margin: 0;
+          padding: 0 2px;
+
+          color: brown;
+          border-color: brown;
+          background-color: brown;
+        }
+
+        .day.open {
+          background-color: rgba(165, 42, 42, 0.2);
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-padding"></div>
+
+  <div class="content">
+    <div class="row">
+      <div class="day">0</div>
+    </div>
+    <div class="row">
+      <div class="day">1</div>
+      <div class="day">2</div>
+    </div>
+    <div class="row">
+      <div class="day">3</div>
+      <div class="day">4</div>
+      <div class="day">5</div>
+      <div class="day">6</div>
+    </div>
+    <div class="row">
+      <div class="day">7</div>
+      <div class="day">8</div>
+      <div class="day">9</div>
+      <div class="day">10</div>
+      <div class="day">11</div>
+      <div class="day">12</div>
+    </div>
+    <div class="row">
+      <div class="day">13</div>
+      <div class="day">14</div>
+      <div class="day">15</div>
+      <div class="day">16</div>
+    </div>
+    <div class="row">
+      <div class="day">17</div>
+      <div class="day">18</div>
+      <div class="day">19</div>
+      <div class="day">20</div>
+      <div class="day">21</div>
+    </div>
+    <div class="row">
+      <div class="day">22</div>
+      <div class="day">23</div>
+      <div class="day">24</div>
+      <div class="day">25</div>
+      <div class="day">26</div>
+      <div class="day">27</div>
+      <div class="day">28</div>
+    </div>
+    <div class="row">
+      <div class="day">29</div>
+      <div class="day">30</div>
+      <div class="day">31</div>
+      <div class="day">32</div>
+      <div class="day">33</div>
+      <div class="day">34</div>
+      <div class="day">35</div>
+      <div class="day">36</div>
+      <div class="day">37</div>
+    </div>
+    <div class="row">
+      <div class="day">38</div>
+      <div class="day">39</div>
+      <div class="day">40</div>
+      <div class="day">41</div>
+      <div class="day">42</div>
+      <div class="day">43</div>
+    </div>
+    <div class="row">
+      <div class="day">44</div>
+      <div class="day">45</div>
+      <div class="day">46</div>
+      <div class="day">47</div>
+      <div class="day">48</div>
+      <div class="day">49</div>
+      <div class="day">50</div>
+    </div>
+    <div class="row">
+      <div class="day">51</div>
+      <div class="day">52</div>
+      <div class="day">53</div>
+      <div class="day">54</div>
+      <div class="day">55</div>
+      <div class="day">56</div>
+      <div class="day">57</div>
+      <div class="day">58</div>
+      <div class="day">59</div>
+    </div>
+    <div class="row">
+      <div class="day">60</div>
+      <div class="day">61</div>
+      <div class="day">62</div>
+      <div class="day">63</div>
+      <div class="day">64</div>
+      <div class="day">65</div>
+      <div class="day">66</div>
+      <div class="day">67</div>
+    </div>
+    <div class="row">
+      <div class="day">68</div>
+      <div class="day">69</div>
+      <div class="day">70</div>
+      <div class="day">71</div>
+      <div class="day">72</div>
+      <div class="day">73</div>
+      <div class="day">74</div>
+      <div class="day">75</div>
+      <div class="day">76</div>
+    </div>
+    <div class="row">
+      <div class="day">77</div>
+      <div class="day">78</div>
+      <div class="day">79</div>
+      <div class="day">80</div>
+      <div class="day">81</div>
+      <div class="day">83</div>
+      <div class="day">82</div>
+      <div class="day">84</div>
+      <div class="day">85</div>
+      <div class="day">86</div>
+      <div class="day">87</div>
+      <div class="day">88</div>
+    </div>
+    <div class="row">
+      <div class="day">89</div>
+      <div class="day">90</div>
+      <div class="day">91</div>
+      <div class="day">92</div>
+      <div class="day">93</div>
+      <div class="day">94</div>
+      <div class="day">95</div>
+      <div class="day">96</div>
+      <div class="day">97</div>
+    </div>
+    <div class="row">
+      <div class="day">98</div>
+      <div class="day">99</div>
+      <div class="day">100</div>
+      <div class="day">101</div>
+      <div class="day">102</div>
+      <div class="day">103</div>
+      <div class="day">104</div>
+      <div class="day">105</div>
+      <div class="day">106</div>
+    </div>
+    <div class="row">
+      <div class="day">107</div>
+      <div class="day">108</div>
+      <div class="day">109</div>
+      <div class="day">110</div>
+      <div class="day">111</div>
+      <div class="day">112</div>
+      <div class="day">113</div>
+      <div class="day">114</div>
+      <div class="day">115</div>
+      <div class="day">116</div>
+    </div>
+    <div class="row">
+      <div class="day">117</div>
+      <div class="day">118</div>
+      <div class="day">119</div>
+      <div class="day">120</div>
+      <div class="day">121</div>
+      <div class="day">122</div>
+      <div class="day">123</div>
+      <div class="day">124</div>
+      <div class="day">125</div>
+      <div class="day">126</div>
+      <div class="day">127</div>
+    </div>
+    <div class="row">
+      <div class="day">128</div>
+      <div class="day">129</div>
+      <div class="day">130</div>
+      <div class="day">131</div>
+      <div class="day">132</div>
+      <div class="day">133</div>
+      <div class="day">134</div>
+      <div class="day">135</div>
+      <div class="day">136</div>
+      <div class="day">137</div>
+      <div class="day">138</div>
+      <div class="day">139</div>
+    </div>
+    <div class="row">
+      <div class="day">140</div>
+      <div class="day">141</div>
+      <div class="day">142</div>
+      <div class="day">143</div>
+      <div class="day">144</div>
+      <div class="day">145</div>
+      <div class="day">146</div>
+      <div class="day">147</div>
+      <div class="day">148</div>
+      <div class="day">149</div>
+      <div class="day">150</div>
+      <div class="day">151</div>
+      <div class="day">152</div>
+      <div class="day">153</div>
+      <div class="day">154</div>
+    </div>
+    <div class="row">
+      <div class="day">155</div>
+      <div class="day">156</div>
+    </div>
+    <div class="row">
+      <div class="day">157</div>
+      <div class="day">158</div>
+    </div>
+    <div class="row">
+      <div class="day">159</div>
+      <div class="day">160</div>
+    </div>
+    <div class="row floor">
+      <div class="day">161</div>
+      <div class="day">163</div>
+      <div class="day">162</div>
+      <div class="day">164</div>
+      <div class="day">165</div>
+      <div class="day">166</div>
+      <div class="day">167</div>
+      <div class="day">168</div>
+      <div class="day">169</div>
+      <div class="day">170</div>
+      <div class="day">171</div>
+      <div class="day">172</div>
+      <div class="day">173</div>
+      <div class="day">174</div>
+      <div class="day">175</div>
+      <div class="day">176</div>
+      <div class="day">177</div>
+      <div class="day">178</div>
+      <div class="day">179</div>
+      <div class="day">180</div>
+      <div class="day">181</div>
+      <div class="day">182</div>
+      <div class="day">183</div>
+      <div class="day">184</div>
+      <div class="day">185</div>
+      <div class="day">186</div>
+      <div class="day">187</div>
+      <div class="day">188</div>
+      <div class="day">189</div>
+      <div class="day">190</div>
+      <div class="day">191</div>
+      <div class="day">192</div>
+      <div class="day">193</div>
+      <div class="day">194</div>
+      <div class="day">195</div>
+      <div class="day">196</div>
+      <div class="day">197</div>
+      <div class="day">198</div>
+      <div class="day">199</div>
+      <div class="day">200</div>
+      <div class="day">201</div>
+      <div class="day">202</div>
+      <div class="day">203</div>
+      <div class="day">204</div>
+      <div class="day">205</div>
+      <div class="day">206</div>
+      <div class="day">207</div>
+      <div class="day">208</div>
+      <div class="day">209</div>
+      <div class="day">210</div>
+      <div class="day">211</div>
+      <div class="day">212</div>
+      <div class="day">213</div>
+      <div class="day">214</div>
+      <div class="day">215</div>
+      <div class="day">216</div>
+      <div class="day">217</div>
+      <div class="day">218</div>
+      <div class="day">219</div>
+      <div class="day">220</div>
+      <div class="day">221</div>
+      <div class="day">222</div>
+      <div class="day">223</div>
+      <div class="day">224</div>
+      <div class="day">225</div>
+      <div class="day">226</div>
+      <div class="day">227</div>
+      <div class="day">228</div>
+      <div class="day">229</div>
+      <div class="day">230</div>
+      <div class="day">231</div>
+      <div class="day">232</div>
+      <div class="day">233</div>
+      <div class="day">234</div>
+      <div class="day">235</div>
+      <div class="day">236</div>
+      <div class="day">237</div>
+      <div class="day">238</div>
+      <div class="day">239</div>
+      <div class="day">240</div>
+      <div class="day">241</div>
+      <div class="day">242</div>
+      <div class="day">243</div>
+      <div class="day">244</div>
+      <div class="day">245</div>
+      <div class="day">246</div>
+      <div class="day">247</div>
+      <div class="day">248</div>
+      <div class="day">249</div>
+      <div class="day">250</div>
+      <div class="day">251</div>
+      <div class="day">252</div>
+      <div class="day">253</div>
+      <div class="day">254</div>
+      <div class="day">255</div>
+      <div class="day">256</div>
+      <div class="day">257</div>
+      <div class="day">258</div>
+      <div class="day">259</div>
+      <div class="day">260</div>
+      <div class="day">261</div>
+      <div class="day">262</div>
+      <div class="day">263</div>
+      <div class="day">264</div>
+      <div class="day">265</div>
+      <div class="day">266</div>
+      <div class="day">267</div>
+      <div class="day">268</div>
+      <div class="day">269</div>
+      <div class="day">270</div>
+      <div class="day">271</div>
+      <div class="day">272</div>
+      <div class="day">273</div>
+      <div class="day">274</div>
+      <div class="day">275</div>
+      <div class="day">276</div>
+      <div class="day">277</div>
+      <div class="day">278</div>
+      <div class="day">279</div>
+      <div class="day">280</div>
+      <div class="day">281</div>
+      <div class="day">282</div>
+      <div class="day">283</div>
+      <div class="day">284</div>
+      <div class="day">285</div>
+      <div class="day">286</div>
+      <div class="day">287</div>
+      <div class="day">288</div>
+      <div class="day">289</div>
+      <div class="day">290</div>
+      <div class="day">291</div>
+      <div class="day">292</div>
+      <div class="day">293</div>
+      <div class="day">294</div>
+      <div class="day">295</div>
+      <div class="day">296</div>
+      <div class="day">297</div>
+      <div class="day">298</div>
+      <div class="day">299</div>
+      <div class="day">300</div>
+      <div class="day">301</div>
+      <div class="day">302</div>
+      <div class="day">303</div>
+      <div class="day">304</div>
+      <div class="day">305</div>
+      <div class="day">306</div>
+      <div class="day">307</div>
+      <div class="day">308</div>
+      <div class="day">309</div>
+      <div class="day">310</div>
+      <div class="day">311</div>
+      <div class="day">312</div>
+      <div class="day">313</div>
+      <div class="day">314</div>
+      <div class="day">315</div>
+      <div class="day">316</div>
+      <div class="day">317</div>
+      <div class="day">318</div>
+      <div class="day">319</div>
+      <div class="day">320</div>
+      <div class="day">321</div>
+      <div class="day">322</div>
+      <div class="day">323</div>
+      <div class="day">324</div>
+      <div class="day">325</div>
+      <div class="day">326</div>
+      <div class="day">327</div>
+      <div class="day">328</div>
+      <div class="day">329</div>
+      <div class="day">330</div>
+      <div class="day">331</div>
+      <div class="day">332</div>
+      <div class="day">333</div>
+      <div class="day">334</div>
+      <div class="day">335</div>
+      <div class="day">336</div>
+      <div class="day">337</div>
+      <div class="day">338</div>
+      <div class="day">339</div>
+      <div class="day">340</div>
+      <div id="leapDay" class="day">341</div>
+    </div>
+  </div>
+
+  <div class="flex-padding"></div>
+</body>
+
+</html>
